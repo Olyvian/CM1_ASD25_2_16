@@ -9,8 +9,8 @@ public class Barang {
         this.harga=harga;
     }
     void tampilDataBarang(){
-        System.out.printf("|%-11s |%-11s |%-11s |%-12s |\n",kodebarang,nama
-        ,stok,harga);    
+        System.out.printf("|%-11s |%-11s |%-11s |%-11s |%-12s |\n",kodebarang,nama
+        ,kategori,stok,harga);    
     }
     
 }

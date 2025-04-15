@@ -10,10 +10,12 @@ public class PembelianMain {
         brg[2] = new Barang("A03", "Barang 3", "Kategori 3", 15, 3000);
 
         
-        Transaksi_Pembelian[] trs = new Transaksi_Pembelian[3];
+        Transaksi_Pembelian[] trs = new Transaksi_Pembelian[5];
         trs[0] = new Transaksi_Pembelian("trs01", "Olyvian", "14/04/2025", 2, brg[2]);
         trs[1] = new Transaksi_Pembelian("trs02", "Olyvian", "16/04/2025", 4, brg[1]);
         trs[2] = new Transaksi_Pembelian("trs03", "Fajar", "17/04/2025", 6, brg[0]);
+        trs[3] = new Transaksi_Pembelian("trs04", "Fajar", "17/04/2025", 9, brg[2]);
+        trs[4] = new Transaksi_Pembelian("trs05", "Olyvian", "17/04/2025", 11, brg[0]);
         
         Service_Class service = new Service_Class(trs);
         
@@ -31,7 +33,7 @@ public class PembelianMain {
             switch (menu) {
                 case 1:
                     System.out.println("Data Barang");
-                    System.out.println("|Kode Barang |Nama Barang |Stok Barang |Harga Barang |");
+                    System.out.println("|Kode Barang |Nama Barang |Kategori    |Stok Barang |Harga Barang |");
                     for (Barang barang : brg) {
                         barang.tampilDataBarang();
                     }
@@ -63,10 +65,7 @@ public class PembelianMain {
                 case 4:
                 System.out.println("Sorting ASC");
                 service.Sorting(trs); 
-                System.out.println("|Kode Transaksi |Nama Pembeli |Tanggal Pembelian |Nama Barang |Kuantitas |Harga |");
-                for (Transaksi_Pembelian transaksi : trs) {
-                    transaksi.tampilDataTransaksi();
-                }
+               
                     break;
 
                 case 5:
